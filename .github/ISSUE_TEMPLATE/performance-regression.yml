@@ -1,0 +1,49 @@
+name: Performance regression
+about: Report FPS, frame-time, memory, loading, or thermal regressions
+title: "[Performance Regression]: "
+labels:
+  - bug
+  - performance
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template for measurable regressions from a known baseline.
+  - type: input
+    id: baseline
+    attributes:
+      label: Baseline build/version
+      placeholder: Build where performance was acceptable
+    validations:
+      required: true
+  - type: input
+    id: regressed
+    attributes:
+      label: Regressed build/version
+      placeholder: Build where regression appears
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Device and environment
+      placeholder: Device model, OS version, graphics settings, thermals, battery state
+    validations:
+      required: true
+  - type: textarea
+    id: metrics
+    attributes:
+      label: Metrics
+      description: Provide baseline vs regressed numbers.
+      placeholder: |
+        FPS:
+        Frame time (ms):
+        Memory (MB):
+        Load time (s):
+    validations:
+      required: true
+  - type: textarea
+    id: capture
+    attributes:
+      label: Profiling capture links
+      description: Link traces, profiler captures, and logs.
