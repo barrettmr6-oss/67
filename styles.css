@@ -1,0 +1,123 @@
+:root {
+  color-scheme: dark;
+  --hud-bg: rgba(15, 25, 30, 0.75);
+  --field: #2d9642;
+  --line: #e8f5de;
+  --accent: #ffb703;
+}
+
+* {
+  box-sizing: border-box;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: none;
+}
+
+html,
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background: #0d1418;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  overflow: hidden;
+}
+
+#app {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+#gameCanvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: var(--field);
+}
+
+#hud {
+  position: absolute;
+  top: env(safe-area-inset-top, 10px);
+  left: 10px;
+  right: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(120px, 1fr));
+  gap: 8px;
+  pointer-events: none;
+}
+
+.panel {
+  background: var(--hud-bg);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  padding: 8px 10px;
+  font-size: clamp(12px, 2.8vw, 16px);
+  font-weight: 700;
+  color: #f1f8f2;
+  text-align: center;
+}
+
+#controls {
+  position: absolute;
+  inset: auto 10px calc(env(safe-area-inset-bottom, 0px) + 10px) 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+#joystickZone {
+  width: min(33vw, 180px);
+  height: min(33vw, 180px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#joystickBase {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: rgba(20, 30, 35, 0.55);
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  position: relative;
+}
+
+#joystickKnob {
+  width: 42%;
+  height: 42%;
+  border-radius: 50%;
+  background: rgba(255, 183, 3, 0.9);
+  position: absolute;
+  left: 29%;
+  top: 29%;
+  transform: translate(0, 0);
+}
+
+#actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(90px, 120px));
+  gap: 8px;
+}
+
+.action {
+  min-height: 58px;
+  border-radius: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  background: rgba(21, 35, 44, 0.85);
+  color: #fff;
+  font-size: clamp(12px, 2.4vw, 16px);
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+#sprintBtn {
+  grid-column: 1 / -1;
+  background: rgba(183, 38, 53, 0.9);
+}
+
+.action:active,
+.action.pressed {
+  transform: scale(0.97);
+  filter: brightness(1.15);
+}

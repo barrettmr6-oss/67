@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Mobile Football Slice</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main id="app">
+      <canvas id="gameCanvas" width="1280" height="720" aria-label="Football game canvas"></canvas>
+
+      <section id="hud" aria-label="Game heads-up display">
+        <div class="panel" id="scorePanel">HOME <span id="homeScore">0</span> - <span id="awayScore">0</span> AWAY</div>
+        <div class="panel" id="clockPanel">Q1 <span id="gameClock">02:00</span></div>
+        <div class="panel" id="possessionPanel">POSSESSION: <span id="possessionTeam">HOME</span></div>
+        <div class="panel" id="downPanel">DOWN <span id="downInfo">1 &amp; 10</span></div>
+      </section>
+
+      <section id="controls" aria-label="Touch controls">
+        <div id="joystickZone">
+          <div id="joystickBase">
+            <div id="joystickKnob"></div>
+          </div>
+        </div>
+
+        <div id="actions">
+          <button id="passBtn" class="action">PASS</button>
+          <button id="tackleBtn" class="action">TACKLE</button>
+          <button id="sprintBtn" class="action">SPRINT</button>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="src/main.js"></script>
+  </body>
+</html>
