@@ -1,0 +1,42 @@
+name: Asset integration problem
+about: Report import, setup, dependency, or runtime asset issues
+title: "[Asset Integration]: "
+labels:
+  - bug
+  - asset-pipeline
+body:
+  - type: textarea
+    id: asset
+    attributes:
+      label: Asset details
+      description: Name, source package, and intended usage.
+      placeholder: Asset name, package version, source URL/store ID
+    validations:
+      required: true
+  - type: textarea
+    id: issue
+    attributes:
+      label: Integration issue
+      placeholder: What fails during import/setup/runtime?
+    validations:
+      required: true
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependency and compatibility notes
+      placeholder: Engine version, plugin dependencies, target platform constraints
+  - type: textarea
+    id: repro
+    attributes:
+      label: Reproduction steps
+      placeholder: |
+        1. Import asset package ...
+        2. Configure ...
+        3. Run/play and observe ...
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Logs and screenshots
+      description: Include import logs, warning dialogs, and runtime errors.

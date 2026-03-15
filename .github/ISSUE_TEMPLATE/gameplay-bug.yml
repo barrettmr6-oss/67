@@ -1,0 +1,51 @@
+name: Gameplay bug
+about: Report gameplay logic or interaction bugs
+title: "[Gameplay Bug]: "
+labels:
+  - bug
+  - gameplay
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a gameplay issue. Please provide reproducible details.
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What happened?
+      placeholder: Short description of the gameplay problem.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Reproduction steps
+      description: Include precise steps and expected vs actual behavior.
+      placeholder: |
+        1. Launch level ...
+        2. Interact with ...
+        3. Observe ...
+    validations:
+      required: true
+  - type: dropdown
+    id: frequency
+    attributes:
+      label: Frequency
+      options:
+        - Always
+        - Often (>50%)
+        - Sometimes (<50%)
+        - Rare/Unable to reproduce consistently
+    validations:
+      required: true
+  - type: input
+    id: build
+    attributes:
+      label: Build/commit
+      placeholder: commit SHA, build number, or branch
+  - type: textarea
+    id: media
+    attributes:
+      label: Logs, captures, and references
+      description: Attach logs, screenshots, or videos.

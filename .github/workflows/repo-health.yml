@@ -1,0 +1,28 @@
+name: Repository Health
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+      - master
+
+jobs:
+  repo-health:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Validate repository structure and engine-aware checks
+        run: python tools/ci/repo_health_check.py
+
+      - name: Run script/static convention checks
+        run: python tools/ci/script_static_checks.py
