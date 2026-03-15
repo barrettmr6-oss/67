@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!129 &1
+PlayerSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 26
+  productGUID: 6b79f5bf8e6e4ec8b3297500c59ebd7a
+  companyName: Baseline Studio
+  productName: Mobile Football Prototype
+  defaultScreenOrientation: 1
+  m_ScriptingBackend:
+    Android: 1
+    iPhone: 1
+  AndroidBundleVersionCode: 1
+  iOSBundleVersion: 1.0
+  applicationIdentifier:
+    Android: com.baseline.mobilefootball
+    iPhone: com.baseline.mobilefootball
+  targetDevice: 2
+  useOnDemandResources: 0
+  accelerometerFrequency: 60
+  colorSpace: 1
+  androidMinSdkVersion: 24
+  AndroidTargetArchitectures: 2
